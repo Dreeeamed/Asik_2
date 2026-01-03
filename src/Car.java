@@ -2,14 +2,14 @@ public class Car extends Vehicle implements Serviceable {
     private int numberOfDoors;
 
     public Car(String model, int year, double basePrice, int numberOfDoors) {
-        super(model, year, basePrice); // Calls the Vehicle constructor
+        super(model, year, basePrice);
         this.numberOfDoors = numberOfDoors;
     }
 
     @Override
     public double calculateInsuranceFee() {
-        // Example logic: 5% of base price + $50 per door
-        return (basePrice * 0.05) + (numberOfDoors * 50);
+        // 5% of base price + $50 per door
+        return (basePrice * 0.5);
     }
 
     @Override

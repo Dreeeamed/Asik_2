@@ -8,10 +8,14 @@ public class FleetApp {
         boolean running = true;
         while (running) {
             System.out.println("\n--- Fleet Management System ---");
-            System.out.println("1. Print all vehicles\n2. Add new car\n3. Add new bus");
-            System.out.println("4. Show total yearly insurance fees\n5. Show vehicles older than N years");
-            System.out.println("6. Perform service for all vehicles\n7. Quit");
-            System.out.print("Choice: ");
+            System.out.println("1. Print all vehicles" + "\n"+
+                    "2. Add new car" + "\n" +
+                    "3. Add new bus" + "\n" +
+                    "4. Show total yearly insurance fees" +"\n"
+                    + "5. Show vehicles older than N years" + "\n" +
+                    "6. Perform service for all vehicles" + "\n" +
+                    "7. Quit");
+            System.out.println("Choose: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -68,15 +72,32 @@ public class FleetApp {
         System.out.print("Enter N (years): ");
         int n = scanner.nextInt();
 
-        vehicles.stream()
-                .filter(v -> v.getAge(current) > n)
-                .forEach(System.out::println);
+        System.out.println("--- Vehicles older than " + n + " years ---");
+        boolean found = false;
+
+        for (Vehicle x : vehicles) {
+            if (x.getAge(current) > n) {
+                System.out.println(x);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No vehicles match the criteria.");
+        }
     }
 
     private void performFleetService() {
+        if (vehicles.isEmpty()) {
+            System.out.println("Fleet is empty lol");
+            return;
+        }
+
+        System.out.println("Starting Fleet-wide Service ");
         for (Vehicle v : vehicles) {
             if (v instanceof Serviceable) {
-                ((Serviceable) v).performService();
+                Serviceable s = (Serviceable) v;
+                s.performService();
             }
         }
     }

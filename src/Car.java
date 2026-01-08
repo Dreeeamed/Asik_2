@@ -8,7 +8,7 @@ public class Car extends Vehicle implements Serviceable {
 
     @Override
     public double calculateInsuranceFee() {
-        // 5% of base price + $50 per door
+        // 5% of base price
         return (basePrice * 0.5);
     }
 

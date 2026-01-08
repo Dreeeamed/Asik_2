@@ -52,9 +52,11 @@ public class FleetApp {
         if (type.equals("Car")) {
             System.out.print("Enter number of doors: ");
             int doors = scanner.nextInt();
+            vehicles.add(new Car(model, year, price, doors));
         } else {
             System.out.print("Enter passenger capacity: ");
             int capacity = scanner.nextInt();
+            vehicles.add(new Bus(model, year, price, capacity));
         }
     }
 

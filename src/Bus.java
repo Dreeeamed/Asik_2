@@ -8,8 +8,8 @@ public class Bus extends Vehicle implements Serviceable {
 
     @Override
     public double calculateInsuranceFee() {
-        // Example logic: 10% of base price + $10 per passenger seat
-        return (basePrice * 0.10) + (passengerCapacity * 10);
+        //10% of base price
+        return (basePrice * 0.10);
     }
 
     @Override

@@ -54,7 +54,9 @@ public class FleetApp {
         if (vehicles.isEmpty()) {
             System.out.println("No vehicles in the fleet.");
         } else {
-            vehicles.forEach(System.out :: println);
+            for(Vehicle x : vehicles){
+                System.out.println(x);
+            }
         }
     }
 

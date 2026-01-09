@@ -114,13 +114,7 @@ public class FleetApp {
             return;
         }
 
-        System.out.println("Starting Fleet-wide Service ");
-        for (Vehicle v : vehicles) {
-            if (v instanceof Serviceable) {
-                Serviceable s = (Serviceable) v;
-                s.performService();
-            }
-        }
+
     }
 
     public static void main(String[] args) {

@@ -14,7 +14,7 @@ public class Bus extends Vehicle implements Serviceable {
 
     @Override
     public void performService() {
-        System.out.println("Servicing Bus (ID: " + id + "): Engine overhaul, safety inspection for " +
+        System.out.println("Bus service (ID: " + id + "): Engine cheknut, zaremontil " +
                 passengerCapacity + " seats.");
     }
 

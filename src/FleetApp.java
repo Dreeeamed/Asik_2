@@ -65,7 +65,7 @@ public class FleetApp {
         for (Vehicle v : vehicles) {
             total += v.calculateInsuranceFee();
         }
-        System.out.printf("Total Yearly Insurance Fees: $%.2f%n", total);
+        System.out.println("Total Yearly Insurance Fees: " + total);
     }
 
     private void showOlderThanN() {

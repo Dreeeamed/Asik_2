@@ -18,17 +18,34 @@ public class FleetApp {
             System.out.println("Choose: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); //again fixing the bug with Java
 
             switch (choice) {
-                case 1 -> printVehicles();
-                case 2 -> addVehicle("Car");
-                case 3 -> addVehicle("Bus");
-                case 4 -> showTotalInsurance();
-                case 5 -> showOlderThanN();
-                case 6 -> performFleetService();
-                case 7 -> running = false;
-                default -> System.out.println("Invalid choice.");
+                case 1:
+                    printVehicles();
+                    break;
+                case 2:
+                    addVehicle("Car");
+                    break;
+                case 3:
+                    addVehicle("Bus");
+                    break;
+                case 4:
+                    showTotalInsurance();
+                    break;
+                case 5:
+                    showOlderThanN();
+                    break;
+                case 6:
+                    performFleetService();
+                    break;
+                case 7:
+                    running = false;
+                    break;
+                default:
+                    System.out.println("no choise like this");
+                    System.out.println("Choose: ");
+                    break;
             }
         }
     }
@@ -37,7 +54,7 @@ public class FleetApp {
         if (vehicles.isEmpty()) {
             System.out.println("No vehicles in the fleet.");
         } else {
-            vehicles.forEach(System.out::println);
+            vehicles.forEach(System.out :: println);
         }
     }
 

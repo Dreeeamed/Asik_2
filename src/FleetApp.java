@@ -113,7 +113,9 @@ public class FleetApp {
             System.out.println("Fleet is empty lol");
             return;
         }
-
+        for (Vehicle x : vehicles) {
+            x.performService();
+        }
 
     }
 

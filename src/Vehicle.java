@@ -61,6 +61,7 @@ public abstract class Vehicle {
 
     // Things in General
     public abstract double calculateInsuranceFee();
+    public abstract void performService();
 
     @Override
     public String toString(){

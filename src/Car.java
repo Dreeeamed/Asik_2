@@ -14,7 +14,7 @@ public class Car extends Vehicle implements Serviceable {
 
     @Override
     public void performService() {
-        System.out.println("Car service (ID: " + id + "): all" + numberOfDoors  + "zaremontil");
+        System.out.println("Car service (ID: " + id + "): all " + numberOfDoors  + " doors zaremontil");
     }
 
     @Override
